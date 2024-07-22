@@ -10,12 +10,12 @@ Brief description of each file:
 
 
 Measures of Granularity, Coverage and Impact are provided in folder [ICG-Measurements/](ICG-Measurements/)
-- Coverage
+- Coverage rate of each node, for the seven considered measures (csv and histobar)
   - [ICG-Measurements/CoverageAllNodes.csv](ICG-Measurements/CoverageAllNodes.csv)
   - [ICG-Measurements/CoverageAllNodes.pdf](ICG-Measurements/CoverageAllNodes.pdf)
-- Granularity
+- Granularity of each node, for the seven considered measures (csv and histobar)
   - [ICG-Measurements/GranularityAllNodes.csv](ICG-Measurements/GranularityAllNodes.csv)
   - [ICG-Measurements/GranularityAllNodes.pdf](ICG-Measurements/GranularityAllNodes.pdf)
-- Impact
+- Impact of each node, for the seven considered measures (csv and histobar)
   - [ICG-Measurements/ImpactAllNodes.csv](ICG-Measurements/ImpactAllNodes.csv)
   - [ICG-Measurements/ImpactAllNodes.csv](ICG-Measurements/ImpactAllNodes.csv)
