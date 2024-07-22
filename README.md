@@ -1,4 +1,5 @@
 # ICG4FAIR
+
 Experiments associated to our paper on FAIR assesment tools comparisons submitted to EKAW2024. 
 
 Brief description of each file: 
@@ -6,3 +7,6 @@ Brief description of each file:
 - [fairchecker_evals.csv](fairchecker_evals.csv): the FAIR assesment performed with [FAIR-Checker](https://fair-checker.france-bioinformatique.fr)
 - [fc_crawled_md.ttl](fc_crawled_md.ttl): the RDF metadata crawled with FAIR-Checker
 - [fairchecker_fuji_stddev.csv](fairchecker_fuji_stddev.csv): the comparison of FAIR-Checker and [F-UJI](https://www.f-uji.net) global scores
+
+
+Measures of Granularity, Coverage and Impact are provided in [folder ICG-Measures](folder ICG-Measures)
