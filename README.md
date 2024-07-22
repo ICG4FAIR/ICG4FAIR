@@ -9,4 +9,4 @@ Brief description of each file:
 - [fairchecker_fuji_stddev.csv](fairchecker_fuji_stddev.csv): the comparison of FAIR-Checker and [F-UJI](https://www.f-uji.net) global scores
 
 
-Measures of Granularity, Coverage and Impact are provided in folder [ICG-Measures](ICG-Measures)
+Measures of Granularity, Coverage and Impact are provided in folder [ICG-Measurements/](ICG-Measurements/)
