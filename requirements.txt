@@ -1,0 +1,5 @@
+jupyter
+tqdm
+requests==2.32.3
+pandas==2.2.2
+rdflib==7.0.0
