@@ -1,6 +1,9 @@
-CoverageAllNodes.csv
-CoverageAllNodes.pdf
-GranularityAllNodes.csv
-GranularityAllNodes.pdf
-ImpactAllNodes.csv
-ImpactAllNodes.pdf
+- Coverage
+  - CoverageAllNodes.csv
+  - CoverageAllNodes.pdf
+- Granularity
+  - GranularityAllNodes.csv
+  - GranularityAllNodes.pdf
+- Impact
+  - ImpactAllNodes.csv
+  - ImpactAllNodes.pdf
