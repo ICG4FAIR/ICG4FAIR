@@ -1,9 +1,9 @@
-- Coverage
+- Coverage rate of each node, for the seven considered measures (csv and histobar)
   - [CoverageAllNodes.csv](CoverageAllNodes.csv)
   - [CoverageAllNodes.pdf](CoverageAllNodes.pdf)
-- Granularity
+- Granularity of each node, for the seven considered measures (csv and histobar)
   - [GranularityAllNodes.csv](GranularityAllNodes.csv)
   - [GranularityAllNodes.pdf](GranularityAllNodes.pdf)
-- Impact
+- Impact of each node, for the seven considered measures (csv and histobar)
   - [ImpactAllNodes.csv](ImpactAllNodes.csv)
   - [ImpactAllNodes.csv](ImpactAllNodes.csv)
