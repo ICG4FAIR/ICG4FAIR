@@ -3,19 +3,21 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix ns1: <http://schema.org/> .
-@prefix ns2: <http://ogp.me/ns#> .
-@prefix ns3: <http://www.w3.org/2007/05/powder-s#> .
-@prefix ns4: <http://bioschemas.org/> .
-@prefix ns5: <http://www.w3.org/TR/void/> .
-@prefix ns6: <http://ogp.me/ns/fb#> .
-@prefix ns7: <http://ogp.me/ns/article#> .
-@prefix ns8: <https://bio.tools/ontology/> .
+@prefix ns2: <http://ogp.me/ns/article#> .
+@prefix ns3: <http://ogp.me/ns#> .
+@prefix ns4: <http://www.w3.org/2007/05/powder-s#> .
+@prefix ns5: <http://mlcommons.org/croissant/> .
+@prefix ns6: <http://bioschemas.org/> .
+@prefix ns7: <https://bio.tools/ontology/> .
+@prefix ns8: <http://www.w3.org/TR/void/> .
+@prefix ns9: <http://ogp.me/ns/fb#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://doi.org/10.1594/PANGAEA.908011> ns2:image "https://www.pangaea.de/assets/social-icons/pangaea-share.png" ;
-    ns3:describedby <http://doi.org/10.1594/PANGAEA.908011?format=citation_bibtex>,
+<http://doi.org/10.1594/PANGAEA.908011> ns3:image "https://www.pangaea.de/assets/social-icons/pangaea-share.png" ;
+    ns4:describedby <http://doi.org/10.1594/PANGAEA.908011?format=citation_bibtex>,
         <http://doi.org/10.1594/PANGAEA.908011?format=citation_ris>,
         <https://doi.pangaea.de/10.1594/PANGAEA.908011?format=citation_bibtex>,
         <https://doi.pangaea.de/10.1594/PANGAEA.908011?format=citation_ris>,
@@ -27,7 +29,7 @@
         <https://doi.pangaea.de/10.1594/PANGAEA.908011?format=metadata_panmd> .
 
 <https://bio.tools/bwa> a ns1:SoftwareApplication ;
-    ns4:input <https://bio.tools/bwa/op_1/in_1>,
+    ns6:input <https://bio.tools/bwa/op_1/in_1>,
         <https://bio.tools/bwa/op_2/in_1>,
         <https://bio.tools/bwa/op_2/in_2>,
         <https://bio.tools/bwa/op_3/in_1>,
@@ -40,18 +42,16 @@
         <https://bio.tools/bwa/op_5/in_3>,
         <https://bio.tools/bwa/op_6/in_1>,
         <https://bio.tools/bwa/op_6/in_2> ;
-    ns4:output <https://bio.tools/bwa/op_1/in_1>,
+    ns6:output <https://bio.tools/bwa/op_1/in_1>,
         <https://bio.tools/bwa/op_2/in_1>,
         <https://bio.tools/bwa/op_3/in_1>,
         <https://bio.tools/bwa/op_4/in_1>,
         <https://bio.tools/bwa/op_5/in_1>,
         <https://bio.tools/bwa/op_6/in_1> ;
-    ns2:description "Fast, accurate, memory-efficient aligner for short and long sequencing reads",
-        "{{ngMeta['og:description']}}" ;
-    ns2:image "",
-        "{{ngMeta['og:image']}}" ;
-    ns2:title "BWA",
-        "{{ngMeta['og:title']}}" ;
+    ns3:description "A registry of bioinformatics software resources including biological databases, analytical tools and data services." ;
+    ns3:image "https://bio.tools/img/ELIXIR_logo_white_background_small.png" ;
+    ns3:title "bio.tools · Bioinformatics Tools and Services Discovery Portal",
+        "bio.tools Â· Bioinformatics Tools and Services Discovery Portal" ;
     dcterms:conformsTo "https://bioschemas.org/profiles/ComputationalTool/1.0-RELEASE" ;
     ns1:applicationSubCategory <http://edamontology.org/topic_0102> ;
     ns1:citation <https://doi.org/10.1016/j.ygeno.2017.03.001>,
@@ -61,6 +61,7 @@
         <https://doi.org/10.1186/1471-2105-14-184>,
         <https://doi.org/10.1186/1471-2164-15-264>,
         "pmcid:PMC2705234",
+        "pmcid:PMC2828108",
         "pmcid:PMC3694458",
         "pmcid:PMC4051166",
         "pubmed:19451168",
@@ -75,7 +76,7 @@
         <http://edamontology.org/operation_3211>,
         <http://edamontology.org/operation_3429> ;
     ns1:softwareHelp <http://bio-bwa.sourceforge.net/bwa.shtml> ;
-    ns8:primaryContact "bwa team" .
+    ns7:primaryContact "bwa team" .
 
 <https://data.rivm.nl/meta/srv/resources/catalogs/06adf1ec-5e49-4741-8279-f26b1dd5b5dc> a dcat:Catalog ;
     rdfs:label """RIVMdata (RIVM)
@@ -84,8 +85,8 @@
     dcterms:language "eng" ;
     dcterms:publisher <https://data.rivm.nl/meta/srv/resources/organizations/RIVM> ;
     dcterms:title "RIVMdata"@en ;
-    ns5:openSearchDescription "https://data.rivm.nl/meta/srv/eng/portal.opensearch" ;
-    ns5:uriLookupEndpoint "https://data.rivm.nl/meta/srv/eng/rdf.search?any=" ;
+    ns8:openSearchDescription "https://data.rivm.nl/meta/srv/eng/portal.opensearch" ;
+    ns8:uriLookupEndpoint "https://data.rivm.nl/meta/srv/eng/rdf.search?any=" ;
     dcat:dataset <https://data.rivm.nl/meta/srv/resources/4e1af1a5-d602-4425-b799-6ada8549fe0d> ;
     dcat:record <https://data.rivm.nl/meta/records/1c0fcd57-1102-4620-9cfa-441e93ea5604> ;
     dcat:themes <https://data.rivm.nl/meta/srv/resources/registries/vocabularies/external.place.regions>,
@@ -260,29 +261,33 @@ Deceased: The number of deceased persons reported to the PHSs who tested positiv
         "ziekenhuisopnames" ;
     dcat:theme <https://inspire.ec.europa.eu/metadata-codelist/TopicCategory/health> .
 
-<https://data.who.int/dashboards/covid19/data> ns2:description "<p>Updated quarterly</p>" ;
-    ns2:locale "en_US" ;
-    ns2:site_name "datadot" ;
-    ns2:title "COVID-19 data | WHO COVID-19 dashboard" ;
-    ns2:type "website" ;
-    ns2:url "https://data.who.int/dashboards/covid19/data" .
+<https://data.who.int/dashboards/covid19/data> ns3:description "<p>Updated quarterly</p>" ;
+    ns3:locale "en_US" ;
+    ns3:site_name "datadot" ;
+    ns3:title "COVID-19 data | WHO COVID-19 dashboard" ;
+    ns3:type "website" ;
+    ns3:url "https://data.who.int/dashboards/covid19/data" .
 
-<https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/JGO6VI> ns2:description "Supernovae are dying stars whose light curves change in certain special patterns, which helps astronomers infer the expansion coefficient of the Un..."@en ;
-    ns2:image "https://dataverse.harvard.edu/jakarta.faces.resource/images/dataverse-icon-1200.png.xhtml"@en ;
-    ns2:site_name "Harvard Dataverse"@en ;
-    ns2:title "Supernova Detection Datasets"@en ;
-    ns2:type "article"@en ;
-    ns2:url "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/JGO6VI"@en ;
-    ns7:author "Yin, Kai"@en ;
-    ns7:published_time "2020-11-16"@en .
+<https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/JGO6VI> ns3:description "Supernovae are dying stars whose light curves change in certain special patterns, which helps astronomers infer the expansion coefficient of the Un..."@en ;
+    ns3:image "https://dataverse.harvard.edu/jakarta.faces.resource/images/dataverse-icon-1200.png.xhtml"@en ;
+    ns3:site_name "Harvard Dataverse"@en ;
+    ns3:title "Supernova Detection Datasets"@en ;
+    ns3:type "article"@en ;
+    ns3:url "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/JGO6VI"@en ;
+    ns2:author "Yin, Kai"@en ;
+    ns2:published_time "2020-11-16"@en .
 
 <https://doi.org/10.1594/PANGAEA.908011> a ns1:Dataset ;
     ns1:abstract "This data set contains unpublished measurements of the maximum diameter of shells of the planktic foraminifer Neogloboquadrina pachyderma sin. carried out on surface sediment samples from the Norwegian-Greenland Sea." ;
+    ns1:additionalType "dataset" ;
     ns1:conditionsOfAccess "unrestricted" ;
     ns1:creator <https://orcid.org/0000-0003-3000-0020> ;
     ns1:datePublished "2019-11-01"^^ns1:Date ;
     ns1:description "This data set contains unpublished measurements of the maximum diameter of shells of the planktic foraminifer Neogloboquadrina pachyderma sin. carried out on surface sediment samples from the Norwegian-Greenland Sea." ;
     ns1:distribution [ a ns1:DataDownload ;
+            ns1:contentUrl <https://doi.pangaea.de/10.1594/PANGAEA.908011?format=html> ;
+            ns1:encodingFormat "text/html" ],
+        [ a ns1:DataDownload ;
             ns1:contentUrl <https://doi.pangaea.de/10.1594/PANGAEA.908011?format=textfile> ;
             ns1:encodingFormat "text/tab-separated-values" ],
         [ a ns1:DataDownload ;
@@ -292,14 +297,11 @@ Deceased: The number of deceased persons reported to the PHSs who tested positiv
             ns1:contentUrl <https://doi.pangaea.de/10.1594/PANGAEA.908011?format=textfile> ;
             ns1:encodingFormat "text/tab-separated-values" ],
         [ a ns1:DataDownload ;
-            ns1:contentUrl <https://doi.pangaea.de/10.1594/PANGAEA.908011?format=textfile> ;
-            ns1:encodingFormat "text/tab-separated-values" ],
-        [ a ns1:DataDownload ;
             ns1:contentUrl <https://doi.pangaea.de/10.1594/PANGAEA.908011?format=html> ;
             ns1:encodingFormat "text/html" ],
         [ a ns1:DataDownload ;
-            ns1:contentUrl <https://doi.pangaea.de/10.1594/PANGAEA.908011?format=html> ;
-            ns1:encodingFormat "text/html" ] ;
+            ns1:contentUrl <https://doi.pangaea.de/10.1594/PANGAEA.908011?format=textfile> ;
+            ns1:encodingFormat "text/tab-separated-values" ] ;
     ns1:identifier "https://doi.org/10.1594/PANGAEA.908011" ;
     ns1:inLanguage "en" ;
     ns1:includedInDataCatalog [ a ns1:DataCatalog ;
@@ -386,112 +388,8 @@ Deceased: The number of deceased persons reported to the PHSs who tested positiv
                         <urn:obo:pato:term:0001334> ] ;
             ns1:unitText "µm" ] .
 
-<https://doi.org/10.7910/DVN/JGO6VI> a ns1:Dataset ;
-    ns1:author <https://orcid.org/0000-0002-9248-6858> ;
-    ns1:creator <https://orcid.org/0000-0002-9248-6858> ;
-    ns1:dateModified "2020-11-16"^^ns1:Date ;
-    ns1:datePublished "2020-11-15"^^ns1:Date ;
-    ns1:description "Supernovae are dying stars whose light curves change in certain special patterns, which helps astronomers infer the expansion coefficient of the Universe. A series of sky surveys were launched in search of supernovae and generated tremendous amount of data, which pushed astronomy into a new era of big data. While the traditional machine learning methods performs well to deal with such data, the deep learning methods such as convolutional neural networks demonstrate more powerful adaptability for big data in this area. However, most data in the existing works are either simulated or without generality. To address these problems, we collected and sorted all the known objectives of the Pan-STARRS and the Popular Supernova Project (PSP) and produced two datasets and then compared the YOLOv3 and the FCOS algorithm on them." ;
-    ns1:distribution [ a ns1:DataDownload ;
-            ns1:contentSize 524288000 ;
-            ns1:contentUrl <https://dataverse.harvard.edu/api/access/datafile/4174488> ;
-            ns1:fileFormat "application/octet-stream" ;
-            ns1:name "Panstarrs.z01" ],
-        [ a ns1:DataDownload ;
-            ns1:contentSize 1057126833 ;
-            ns1:contentUrl <https://dataverse.harvard.edu/api/access/datafile/4174522> ;
-            ns1:fileFormat "application/zip" ;
-            ns1:name "hybrid1-1.zip" ],
-        [ a ns1:DataDownload ;
-            ns1:contentSize 524288000 ;
-            ns1:contentUrl <https://dataverse.harvard.edu/api/access/datafile/4174486> ;
-            ns1:fileFormat "application/octet-stream" ;
-            ns1:name "Panstarrs.z02" ],
-        [ a ns1:DataDownload ;
-            ns1:contentSize 468155563 ;
-            ns1:contentUrl <https://dataverse.harvard.edu/api/access/datafile/4174464> ;
-            ns1:description "Panstarrs Dataset" ;
-            ns1:fileFormat "application/zip" ;
-            ns1:name "Panstarrs.zip" ],
-        [ a ns1:DataDownload ;
-            ns1:contentSize 468155563 ;
-            ns1:contentUrl <https://dataverse.harvard.edu/api/access/datafile/4174464> ;
-            ns1:description "Panstarrs Dataset" ;
-            ns1:fileFormat "application/zip" ;
-            ns1:name "Panstarrs.zip" ],
-        [ a ns1:DataDownload ;
-            ns1:contentSize 524288000 ;
-            ns1:contentUrl <https://dataverse.harvard.edu/api/access/datafile/4174488> ;
-            ns1:fileFormat "application/octet-stream" ;
-            ns1:name "Panstarrs.z01" ],
-        [ a ns1:DataDownload ;
-            ns1:contentSize 524288000 ;
-            ns1:contentUrl <https://dataverse.harvard.edu/api/access/datafile/4174487> ;
-            ns1:fileFormat "application/octet-stream" ;
-            ns1:name "Panstarrs.z03" ],
-        [ a ns1:DataDownload ;
-            ns1:contentSize 586235600 ;
-            ns1:contentUrl <https://dataverse.harvard.edu/api/access/datafile/4174458> ;
-            ns1:fileFormat "application/zip" ;
-            ns1:name "PSP_aug.zip" ],
-        [ a ns1:DataDownload ;
-            ns1:contentSize 586235600 ;
-            ns1:contentUrl <https://dataverse.harvard.edu/api/access/datafile/4174458> ;
-            ns1:fileFormat "application/zip" ;
-            ns1:name "PSP_aug.zip" ],
-        [ a ns1:DataDownload ;
-            ns1:contentSize 524288000 ;
-            ns1:contentUrl <https://dataverse.harvard.edu/api/access/datafile/4174487> ;
-            ns1:fileFormat "application/octet-stream" ;
-            ns1:name "Panstarrs.z03" ],
-        [ a ns1:DataDownload ;
-            ns1:contentSize 120612836 ;
-            ns1:contentUrl <https://dataverse.harvard.edu/api/access/datafile/4174452> ;
-            ns1:fileFormat "application/zip" ;
-            ns1:name "PSP_ori.zip" ],
-        [ a ns1:DataDownload ;
-            ns1:contentSize 120612836 ;
-            ns1:contentUrl <https://dataverse.harvard.edu/api/access/datafile/4174452> ;
-            ns1:fileFormat "application/zip" ;
-            ns1:name "PSP_ori.zip" ],
-        [ a ns1:DataDownload ;
-            ns1:contentSize 524288000 ;
-            ns1:contentUrl <https://dataverse.harvard.edu/api/access/datafile/4174486> ;
-            ns1:fileFormat "application/octet-stream" ;
-            ns1:name "Panstarrs.z02" ],
-        [ a ns1:DataDownload ;
-            ns1:contentSize 1057126833 ;
-            ns1:contentUrl <https://dataverse.harvard.edu/api/access/datafile/4174522> ;
-            ns1:fileFormat "application/zip" ;
-            ns1:name "hybrid1-1.zip" ] ;
-    ns1:identifier "https://doi.org/10.7910/DVN/JGO6VI" ;
-    ns1:includedInDataCatalog [ a ns1:DataCatalog ;
-            ns1:name "Harvard Dataverse" ;
-            ns1:url <https://dataverse.harvard.edu> ],
-        [ a ns1:DataCatalog ;
-            ns1:name "Harvard Dataverse" ;
-            ns1:url <https://dataverse.harvard.edu> ] ;
-    ns1:keywords "Astronomy and Astrophysics",
-        "Computer and Information Science" ;
-    ns1:license [ a ns1:Dataset ;
-            ns1:text "CC0" ;
-            ns1:url <https://creativecommons.org/publicdomain/zero/1.0/> ],
-        [ a ns1:Dataset ;
-            ns1:text "CC0" ;
-            ns1:url <https://creativecommons.org/publicdomain/zero/1.0/> ] ;
-    ns1:name "Supernova Detection Datasets" ;
-    ns1:provider [ a ns1:Organization ;
-            ns1:name "Harvard Dataverse" ],
-        [ a ns1:Organization ;
-            ns1:name "Harvard Dataverse" ] ;
-    ns1:publisher [ a ns1:Organization ;
-            ns1:name "Harvard Dataverse" ],
-        [ a ns1:Organization ;
-            ns1:name "Harvard Dataverse" ] ;
-    ns1:version "4" .
-
 <https://tess.elixir-europe.org/materials/make-your-research-fairer-with-quarto-github-and-zenodo> a ns1:LearningResource ;
-    ns2:description """<h1>Overview</h1>
+    ns3:description """<h1>Overview</h1>
 
 <p>The FAIR (Findable, Accessible, Interoperable and Reusable) principles provide guidelines for making research data and other resources more easily discoverable and reusable, which can help increase your research's impact and exposure. Adhering to these principles also ensures that your research is more reliable and reproducible, as others can more easily access and provide feedback. In addition, making your research FAIR can promote the principles of open science and make it easier for others to contribute to and build upon your work. Finally, many funding agencies and journals now expect that your research outputs be made FAIR as a condition of funding or publication, so adhering to these principles can help to ensure that your research meets these requirements.</p>
 
@@ -553,14 +451,14 @@ Deceased: The number of deceased persons reported to the PHSs who tested positiv
 
 <p>For more information, please contact <a href="mailto://training@sib.swiss" target="_blank" rel="noopener">training@sib.swiss</a>.</p>
 """ ;
-    ns2:image "https://tess.elixir-europe.org/assets/elixir/elixir-tess-219b707c4912e9c46c917a24ce72b464ec9f2fd56ce03dbcee8b2f6b9ac98a44.svg" ;
-    ns2:title "Make your research FAIRer with Quarto, GitHub and Zenodo" ;
-    ns2:url "https://tess.elixir-europe.org/materials/make-your-research-fairer-with-quarto-github-and-zenodo" ;
+    ns3:image "https://tess.elixir-europe.org/assets/elixir/elixir-tess-219b707c4912e9c46c917a24ce72b464ec9f2fd56ce03dbcee8b2f6b9ac98a44.svg" ;
+    ns3:title "Make your research FAIRer with Quarto, GitHub and Zenodo" ;
+    ns3:url "https://tess.elixir-europe.org/materials/make-your-research-fairer-with-quarto-github-and-zenodo" ;
     dcterms:conformsTo <https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE> ;
     ns1:author [ a ns1:Person ;
-            ns1:name "SIB Swiss Institute of Bioinformatics" ],
-        [ a ns1:Person ;
             ns1:name "Geert van Geest and Wandrille Duchemin" ],
+        [ a ns1:Person ;
+            ns1:name "SIB Swiss Institute of Bioinformatics" ],
         [ a ns1:Person ;
             ns1:name "SIB Swiss Institute of Bioinformatics" ],
         [ a ns1:Person ;
@@ -765,6 +663,62 @@ For more information, please contact [training@sib.swiss](mailto://training@sib.
     dcterms:title "theme.terms.rdf" ;
     dcterms:uri "https://data.rivm.nl/meta/srv/eng/thesaurus.download?ref=external.theme.terms" .
 
+<https://dataverse.harvard.edu/PSP_aug.zip> a ns5:FileObject ;
+    ns5:md5 "41d0912bec1548de7baba751f1ef1def"@en ;
+    schema:contentSize "586235600"@en ;
+    schema:contentUrl "https://dataverse.harvard.edu/api/access/datafile/4174486"@en ;
+    schema:description ""@en ;
+    schema:encodingFormat "application/zip"@en ;
+    schema:name "PSP_aug.zip"@en .
+
+<https://dataverse.harvard.edu/PSP_ori.zip> a ns5:FileObject ;
+    ns5:md5 "af4520be3bf29aa4b9729f29713cedd3"@en ;
+    schema:contentSize "120612836"@en ;
+    schema:contentUrl "https://dataverse.harvard.edu/api/access/datafile/4174487"@en ;
+    schema:description ""@en ;
+    schema:encodingFormat "application/zip"@en ;
+    schema:name "PSP_ori.zip"@en .
+
+<https://dataverse.harvard.edu/Panstarrs.z01> a ns5:FileObject ;
+    ns5:md5 "982f800c4e01d4f5f4f9f8dec715f713"@en ;
+    schema:contentSize "524288000"@en ;
+    schema:contentUrl "https://dataverse.harvard.edu/api/access/datafile/4174488"@en ;
+    schema:description ""@en ;
+    schema:encodingFormat "application/octet-stream"@en ;
+    schema:name "Panstarrs.z01"@en .
+
+<https://dataverse.harvard.edu/Panstarrs.z02> a ns5:FileObject ;
+    ns5:md5 "d2b5bf38f6eb8a9c5e4d652f0a199ecd"@en ;
+    schema:contentSize "524288000"@en ;
+    schema:contentUrl "https://dataverse.harvard.edu/api/access/datafile/4174458"@en ;
+    schema:description ""@en ;
+    schema:encodingFormat "application/octet-stream"@en ;
+    schema:name "Panstarrs.z02"@en .
+
+<https://dataverse.harvard.edu/Panstarrs.z03> a ns5:FileObject ;
+    ns5:md5 "cc2b46eace587bd0a4d2003979aae22b"@en ;
+    schema:contentSize "524288000"@en ;
+    schema:contentUrl "https://dataverse.harvard.edu/api/access/datafile/4174452"@en ;
+    schema:description ""@en ;
+    schema:encodingFormat "application/octet-stream"@en ;
+    schema:name "Panstarrs.z03"@en .
+
+<https://dataverse.harvard.edu/Panstarrs.zip> a ns5:FileObject ;
+    ns5:md5 "595a1f2e117ca46c744a1105bd005e83"@en ;
+    schema:contentSize "468155563"@en ;
+    schema:contentUrl "https://dataverse.harvard.edu/api/access/datafile/4174522"@en ;
+    schema:description "Panstarrs Dataset"@en ;
+    schema:encodingFormat "application/zip"@en ;
+    schema:name "Panstarrs.zip"@en .
+
+<https://dataverse.harvard.edu/hybrid1-1.zip> a ns5:FileObject ;
+    ns5:md5 "c6f9e6d47fe1ddc921642f558ce86fd4"@en ;
+    schema:contentSize "1057126833"@en ;
+    schema:contentUrl "https://dataverse.harvard.edu/api/access/datafile/4174464"@en ;
+    schema:description ""@en ;
+    schema:encodingFormat "application/zip"@en ;
+    schema:name "hybrid1-1.zip"@en .
+
 <https://doi.org/10.1016/j.ygeno.2017.03.001> a ns1:CreativeWork .
 
 <https://doi.org/10.1093/bioinformatics/btp324> a ns1:CreativeWork .
@@ -777,6 +731,15 @@ For more information, please contact [training@sib.swiss](mailto://training@sib.
 
 <https://doi.org/10.1186/1471-2164-15-264> a ns1:CreativeWork .
 
+<https://orcid.org/0000-0002-9248-6858> a schema:Person ;
+    schema:affiliation [ a schema:Organization ;
+            schema:name "SooChow University"@en ] ;
+    schema:familyName "Yin"@en ;
+    schema:givenName "Kai"@en ;
+    schema:identifier "https://orcid.org/0000-0002-9248-6858"@en ;
+    schema:name "Yin, Kai"@en ;
+    schema:sameAs "https://orcid.org/0000-0002-9248-6858"@en .
+
 <https://orcid.org/0000-0003-3000-0020> a ns1:Person ;
     ns1:email "rhuber@uni-bremen.de" ;
     ns1:familyName "Huber" ;
@@ -784,15 +747,15 @@ For more information, please contact [training@sib.swiss](mailto://training@sib.
     ns1:identifier "https://orcid.org/0000-0003-3000-0020" ;
     ns1:name "Robert Huber" .
 
-<https://www.data.gouv.fr/en/datasets/donnees-relatives-a-lepidemie-de-covid-19-en-france-vue-densemble/> ns2:description "Point d'attention : les données sont désormais disponibles…" ;
-    ns2:image "https://static.data.gouv.fr/avatars/3c/2a35d973814c2681b6941e11810ff3-100.png" ;
-    ns2:title "Données relatives à l’épidémie de COVID-19 en France : vue d’ensemble - data.gouv.fr" ;
-    ns2:type "website" .
+<https://www.data.gouv.fr/en/datasets/donnees-relatives-a-lepidemie-de-covid-19-en-france-vue-densemble/> ns3:description "Point d'attention : les données sont désormais disponibles…" ;
+    ns3:image "https://static.data.gouv.fr/avatars/3c/2a35d973814c2681b6941e11810ff3-100.png" ;
+    ns3:title "Données relatives à l’épidémie de COVID-19 en France : vue d’ensemble - data.gouv.fr" ;
+    ns3:type "website" .
 
 <https://www.data.gouv.fr/en/datasets/donnees-relatives-a-lepidemie-de-covid-19-en-france-vue-densemble/534fff94a3a7292c64a77fc1> a ns1:GovernmentOrganization ;
     ns1:alternateName "ministere-des-solidarites-et-de-la-sante" ;
     ns1:dateCreated "2014-04-17T18:21:40.735000"^^ns1:Date ;
-    ns1:dateModified "2024-07-22T09:05:19.884000"^^ns1:Date ;
+    ns1:dateModified "2025-03-03T05:18:07.483000"^^ns1:Date ;
     ns1:description "Le ministère des solidarités et de la santé prépare et met en œuvre la politique du Gouvernement dans les domaines des affaires sociales, de la solidarité et de la cohésion sociale, de la santé publique et de l&apos;organisation du système de soins. Sous réserve des compétences du ministre de l&apos;économie et des finances, il prépare et met en œuvre la politique du Gouvernement dans le domaine de la protection sociale." ;
     ns1:logo <https://static.data.gouv.fr/avatars/3c/2a35d973814c2681b6941e11810ff3-100.png> ;
     ns1:name "Ministère des Solidarités et de la Santé" ;
@@ -805,54 +768,72 @@ For more information, please contact [training@sib.swiss](mailto://training@sib.
     ns1:dateModified "2022-05-17T22:26:19.088000"^^ns1:Date ;
     ns1:encodingFormat "json" ;
     ns1:extras [ a ns1:PropertyValue ;
-            ns1:name "check:timeout" ;
-            ns1:value false ],
-        [ a ns1:PropertyValue ;
             ns1:name "check:available" ;
             ns1:value true ],
-        [ a ns1:PropertyValue ;
-            ns1:name "check:headers:content-type" ;
-            ns1:value "application/json" ],
-        [ a ns1:PropertyValue ;
-            ns1:name "check:date" ;
-            ns1:value "2023-06-01T13:19:41.832585+00:00" ],
-        [ a ns1:PropertyValue ;
-            ns1:name "check:date" ;
-            ns1:value "2023-06-01T13:19:41.832585+00:00" ],
-        [ a ns1:PropertyValue ;
-            ns1:name "check:timeout" ;
-            ns1:value false ],
-        [ a ns1:PropertyValue ;
-            ns1:name "check:available" ;
-            ns1:value true ],
-        [ a ns1:PropertyValue ;
-            ns1:name "check:headers:content-type" ;
-            ns1:value "application/json" ],
         [ a ns1:PropertyValue ;
             ns1:name "analysis:last-modified-detection" ;
             ns1:value "last-modified-header" ],
         [ a ns1:PropertyValue ;
+            ns1:name "check:status" ;
+            ns1:value 200 ],
+        [ a ns1:PropertyValue ;
+            ns1:name "analysis:mime-type" ;
+            ns1:value "application/json" ],
+        [ a ns1:PropertyValue ;
+            ns1:name "analysis:last-modified-at" ;
+            ns1:value "2022-05-17T20:26:19+00:00" ],
+        [ a ns1:PropertyValue ;
+            ns1:name "analysis:checksum" ;
+            ns1:value "2f91a9bfaebbc77ea473f869e402c7048e9633e8" ],
+        [ a ns1:PropertyValue ;
             ns1:name "analysis:last-modified-at" ;
             ns1:value "2022-05-17T20:26:19+00:00" ],
         [ a ns1:PropertyValue ;
             ns1:name "check:status" ;
             ns1:value 200 ],
         [ a ns1:PropertyValue ;
-            ns1:name "check:status" ;
-            ns1:value 200 ],
+            ns1:name "check:available" ;
+            ns1:value true ],
         [ a ns1:PropertyValue ;
-            ns1:name "analysis:last-modified-at" ;
-            ns1:value "2022-05-17T20:26:19+00:00" ],
+            ns1:name "analysis:checksum" ;
+            ns1:value "2f91a9bfaebbc77ea473f869e402c7048e9633e8" ],
+        [ a ns1:PropertyValue ;
+            ns1:name "analysis:mime-type" ;
+            ns1:value "application/json" ],
+        [ a ns1:PropertyValue ;
+            ns1:name "check:date" ;
+            ns1:value "2024-12-05T12:49:03.636481+00:00" ],
+        [ a ns1:PropertyValue ;
+            ns1:name "check:timeout" ;
+            ns1:value false ],
+        [ a ns1:PropertyValue ;
+            ns1:name "check:date" ;
+            ns1:value "2024-12-05T12:49:03.636481+00:00" ],
+        [ a ns1:PropertyValue ;
+            ns1:name "analysis:content-length" ;
+            ns1:value 501241 ],
+        [ a ns1:PropertyValue ;
+            ns1:name "check:headers:content-type" ;
+            ns1:value "application/json" ],
+        [ a ns1:PropertyValue ;
+            ns1:name "check:timeout" ;
+            ns1:value false ],
+        [ a ns1:PropertyValue ;
+            ns1:name "analysis:content-length" ;
+            ns1:value 501241 ],
         [ a ns1:PropertyValue ;
             ns1:name "analysis:last-modified-detection" ;
-            ns1:value "last-modified-header" ] ;
+            ns1:value "last-modified-header" ],
+        [ a ns1:PropertyValue ;
+            ns1:name "check:headers:content-type" ;
+            ns1:value "application/json" ] ;
     ns1:fileFormat "application/json" ;
     ns1:interactionStatistic [ a ns1:InteractionCounter ;
             ns1:interactionType [ a ns1:DownloadAction ] ;
-            ns1:userInteractionCount 164500 ],
+            ns1:userInteractionCount 174584 ],
         [ a ns1:InteractionCounter ;
             ns1:interactionType [ a ns1:DownloadAction ] ;
-            ns1:userInteractionCount 164500 ] ;
+            ns1:userInteractionCount 174584 ] ;
     ns1:name "synthese-fra.json" ;
     ns1:url <https://www.data.gouv.fr/en/datasets/r/d2671c6c-c0eb-4e12-b69a-8e8f87fc224c> .
 
@@ -863,72 +844,72 @@ For more information, please contact [training@sib.swiss](mailto://training@sib.
     ns1:dateModified "2022-05-17T22:26:20.148000"^^ns1:Date ;
     ns1:encodingFormat "csv" ;
     ns1:extras [ a ns1:PropertyValue ;
+            ns1:name "analysis:last-modified-detection" ;
+            ns1:value "last-modified-header" ],
+        [ a ns1:PropertyValue ;
+            ns1:name "check:headers:content-type" ;
+            ns1:value "text/csv" ],
+        [ a ns1:PropertyValue ;
+            ns1:name "check:headers:content-type" ;
+            ns1:value "text/csv" ],
+        [ a ns1:PropertyValue ;
+            ns1:name "check:available" ;
+            ns1:value true ],
+        [ a ns1:PropertyValue ;
+            ns1:name "check:timeout" ;
+            ns1:value false ],
+        [ a ns1:PropertyValue ;
+            ns1:name "analysis:checksum" ;
+            ns1:value "c58babca9666029179b4da59b4e055883e9aff73" ],
+        [ a ns1:PropertyValue ;
+            ns1:name "check:status" ;
+            ns1:value 200 ],
+        [ a ns1:PropertyValue ;
+            ns1:name "analysis:last-modified-detection" ;
+            ns1:value "last-modified-header" ],
+        [ a ns1:PropertyValue ;
+            ns1:name "check:date" ;
+            ns1:value "2023-08-28T20:20:10.075456+00:00" ],
+        [ a ns1:PropertyValue ;
+            ns1:name "check:available" ;
+            ns1:value true ],
+        [ a ns1:PropertyValue ;
+            ns1:name "check:status" ;
+            ns1:value 200 ],
+        [ a ns1:PropertyValue ;
+            ns1:name "analysis:mime-type" ;
+            ns1:value "application/csv" ],
+        [ a ns1:PropertyValue ;
+            ns1:name "analysis:last-modified-at" ;
+            ns1:value "2022-05-17T20:26:20+00:00" ],
+        [ a ns1:PropertyValue ;
             ns1:name "analysis:mime-type" ;
             ns1:value "application/csv" ],
         [ a ns1:PropertyValue ;
             ns1:name "analysis:content-length" ;
             ns1:value 47464 ],
         [ a ns1:PropertyValue ;
-            ns1:name "check:available" ;
-            ns1:value true ],
-        [ a ns1:PropertyValue ;
             ns1:name "check:date" ;
             ns1:value "2023-08-28T20:20:10.075456+00:00" ],
-        [ a ns1:PropertyValue ;
-            ns1:name "analysis:last-modified-at" ;
-            ns1:value "2022-05-17T20:26:20+00:00" ],
-        [ a ns1:PropertyValue ;
-            ns1:name "analysis:last-modified-detection" ;
-            ns1:value "last-modified-header" ],
-        [ a ns1:PropertyValue ;
-            ns1:name "analysis:last-modified-detection" ;
-            ns1:value "last-modified-header" ],
-        [ a ns1:PropertyValue ;
-            ns1:name "check:status" ;
-            ns1:value 200 ],
-        [ a ns1:PropertyValue ;
-            ns1:name "check:timeout" ;
-            ns1:value false ],
-        [ a ns1:PropertyValue ;
-            ns1:name "analysis:checksum" ;
-            ns1:value "c58babca9666029179b4da59b4e055883e9aff73" ],
-        [ a ns1:PropertyValue ;
-            ns1:name "check:date" ;
-            ns1:value "2023-08-28T20:20:10.075456+00:00" ],
-        [ a ns1:PropertyValue ;
-            ns1:name "analysis:last-modified-at" ;
-            ns1:value "2022-05-17T20:26:20+00:00" ],
-        [ a ns1:PropertyValue ;
-            ns1:name "check:headers:content-type" ;
-            ns1:value "text/csv" ],
-        [ a ns1:PropertyValue ;
-            ns1:name "check:headers:content-type" ;
-            ns1:value "text/csv" ],
-        [ a ns1:PropertyValue ;
-            ns1:name "analysis:checksum" ;
-            ns1:value "c58babca9666029179b4da59b4e055883e9aff73" ],
-        [ a ns1:PropertyValue ;
-            ns1:name "check:status" ;
-            ns1:value 200 ],
-        [ a ns1:PropertyValue ;
-            ns1:name "check:available" ;
-            ns1:value true ],
         [ a ns1:PropertyValue ;
             ns1:name "analysis:content-length" ;
             ns1:value 47464 ],
         [ a ns1:PropertyValue ;
+            ns1:name "analysis:last-modified-at" ;
+            ns1:value "2022-05-17T20:26:20+00:00" ],
+        [ a ns1:PropertyValue ;
             ns1:name "check:timeout" ;
             ns1:value false ],
         [ a ns1:PropertyValue ;
-            ns1:name "analysis:mime-type" ;
-            ns1:value "application/csv" ] ;
+            ns1:name "analysis:checksum" ;
+            ns1:value "c58babca9666029179b4da59b4e055883e9aff73" ] ;
     ns1:fileFormat "text/csv" ;
     ns1:interactionStatistic [ a ns1:InteractionCounter ;
             ns1:interactionType [ a ns1:DownloadAction ] ;
-            ns1:userInteractionCount 62491 ],
+            ns1:userInteractionCount 64669 ],
         [ a ns1:InteractionCounter ;
             ns1:interactionType [ a ns1:DownloadAction ] ;
-            ns1:userInteractionCount 62491 ] ;
+            ns1:userInteractionCount 64669 ] ;
     ns1:name "synthese-fra.csv" ;
     ns1:url <https://www.data.gouv.fr/en/datasets/r/d3a98a30-893f-47f7-96c5-2f4bcaaa0d71> .
 
@@ -980,16 +961,12 @@ For more information, please contact [training@sib.swiss](mailto://training@sib.
     ns1:sameAs "http://edamontology.org/data_0863",
         "http://edamontology.org/data_2044" .
 
-<https://orcid.org/0000-0002-9248-6858> ns1:affiliation "SooChow University" ;
-    ns1:identifier "https://orcid.org/0000-0002-9248-6858" ;
-    ns1:name "Yin, Kai" .
-
-<https://www.kaggle.com/datasets/imdevskp/corona-virus-report> ns2:description "Number of Confirmed, Death and Recovered cases every day across the globe" ;
-    ns2:image "https://storage.googleapis.com/kaggle-datasets-images/494766/948370/d577c5007cd4f761be6485f3e091d4e9/dataset-card.jpg?t=2020-02-16-09-57-57" ;
-    ns2:title "COVID-19 Dataset" ;
-    ns2:type "website" ;
-    ns2:url "https://www.kaggle.com/datasets/imdevskp/corona-virus-report" ;
-    ns6:app_id "2665027677054710" .
+<https://www.kaggle.com/datasets/imdevskp/corona-virus-report> ns3:description "Number of Confirmed, Death and Recovered cases every day across the globe" ;
+    ns3:image "https://storage.googleapis.com/kaggle-datasets-images/494766/948370/d577c5007cd4f761be6485f3e091d4e9/dataset-card.jpg?t=2020-02-16-09-57-57" ;
+    ns3:title "COVID-19 Dataset" ;
+    ns3:type "website" ;
+    ns3:url "https://www.kaggle.com/datasets/imdevskp/corona-virus-report" ;
+    ns9:app_id "2665027677054710" .
 
 <http://qudt.org/1.1/vocab/quantity#Length> a ns1:DefinedTerm ;
     ns1:alternateName "L" ;
@@ -1004,7 +981,7 @@ For more information, please contact [training@sib.swiss](mailto://training@sib.
 
 [] a ns1:Dataset ;
     ns1:alternateName "Number of Confirmed, Death and Recovered cases every day across the globe" ;
-    ns1:commentCount 38 ;
+    ns1:commentCount 40 ;
     ns1:creator [ a ns1:Person ;
             ns1:image <https://storage.googleapis.com/kaggle-avatars/thumbnails/1302389-kg.jpg> ;
             ns1:name "Devakumar K. P." ;
@@ -1066,17 +1043,17 @@ For more information, please contact [training@sib.swiss](mailto://training@sib.
             ns1:name "Kaggle" ;
             ns1:url <https://www.kaggle.com> ] ;
     ns1:interactionStatistic [ a ns1:InteractionCounter ;
-            ns1:interactionType "http://schema.org/ViewAction" ;
-            ns1:userInteractionCount 1227282 ],
-        [ a ns1:InteractionCounter ;
-            ns1:interactionType "http://schema.org/CommentAction" ;
-            ns1:userInteractionCount 38 ],
+            ns1:interactionType "http://schema.org/DownloadAction" ;
+            ns1:userInteractionCount 361572 ],
         [ a ns1:InteractionCounter ;
             ns1:interactionType "http://schema.org/LikeAction" ;
-            ns1:userInteractionCount 2367 ],
+            ns1:userInteractionCount 2532 ],
         [ a ns1:InteractionCounter ;
-            ns1:interactionType "http://schema.org/DownloadAction" ;
-            ns1:userInteractionCount 325905 ] ;
+            ns1:interactionType "http://schema.org/CommentAction" ;
+            ns1:userInteractionCount 40 ],
+        [ a ns1:InteractionCounter ;
+            ns1:interactionType "http://schema.org/ViewAction" ;
+            ns1:userInteractionCount 1352393 ] ;
     ns1:isAccessibleForFree true ;
     ns1:keywords "subject, health and fitness, health, health conditions, diseases",
         "subject, health and fitness, health, health conditions, diseases, covid19",
@@ -1090,9 +1067,35 @@ For more information, please contact [training@sib.swiss](mailto://training@sib.
     ns1:url <https://www.kaggle.com/imdevskp/corona-virus-report> ;
     ns1:version 166 .
 
+[] a schema:Dataset ;
+    ns5:citeAs "@data{DVN/JGO6VI_2020,author = {Yin, Kai},publisher = {Harvard Dataverse},title = {Supernova Detection Datasets},year = {2020},url = {https://doi.org/10.7910/DVN/JGO6VI}}"@en ;
+    dcterms:conformsTo "http://mlcommons.org/croissant/1.0"@en ;
+    schema:creator <https://orcid.org/0000-0002-9248-6858> ;
+    schema:dateModified "2020-11-16"@en ;
+    schema:datePublished "2020-11-15"@en ;
+    schema:description "Supernovae are dying stars whose light curves change in certain special patterns, which helps astronomers infer the expansion coefficient of the Universe. A series of sky surveys were launched in search of supernovae and generated tremendous amount of data, which pushed astronomy into a new era of big data. While the traditional machine learning methods performs well to deal with such data, the deep learning methods such as convolutional neural networks demonstrate more powerful adaptability for big data in this area. However, most data in the existing works are either simulated or without generality. To address these problems, we collected and sorted all the known objectives of the Pan-STARRS and the Popular Supernova Project (PSP) and produced two datasets and then compared the YOLOv3 and the FCOS algorithm on them."@en ;
+    schema:distribution <https://dataverse.harvard.edu/PSP_aug.zip>,
+        <https://dataverse.harvard.edu/PSP_ori.zip>,
+        <https://dataverse.harvard.edu/Panstarrs.z01>,
+        <https://dataverse.harvard.edu/Panstarrs.z02>,
+        <https://dataverse.harvard.edu/Panstarrs.z03>,
+        <https://dataverse.harvard.edu/Panstarrs.zip>,
+        <https://dataverse.harvard.edu/hybrid1-1.zip> ;
+    schema:includedInDataCatalog [ a schema:DataCatalog ;
+            schema:name "Harvard Dataverse"@en ;
+            schema:url "https://dataverse.harvard.edu"@en ] ;
+    schema:keywords "Astronomy and Astrophysics"@en,
+        "Computer and Information Science"@en ;
+    schema:license "http://creativecommons.org/publicdomain/zero/1.0"@en ;
+    schema:name "Supernova Detection Datasets"@en ;
+    schema:publisher [ a schema:Organization ;
+            schema:name "Harvard Dataverse"@en ] ;
+    schema:url "https://doi.org/10.7910/DVN/JGO6VI"@en ;
+    schema:version "4.0"@en .
+
 [] a ns1:Dataset ;
     ns1:alternateName "Number of Confirmed, Death and Recovered cases every day across the globe" ;
-    ns1:commentCount 38 ;
+    ns1:commentCount 40 ;
     ns1:creator [ a ns1:Person ;
             ns1:image <https://storage.googleapis.com/kaggle-avatars/thumbnails/1302389-kg.jpg> ;
             ns1:name "Devakumar K. P." ;
@@ -1154,17 +1157,17 @@ For more information, please contact [training@sib.swiss](mailto://training@sib.
             ns1:name "Kaggle" ;
             ns1:url <https://www.kaggle.com> ] ;
     ns1:interactionStatistic [ a ns1:InteractionCounter ;
-            ns1:interactionType "http://schema.org/LikeAction" ;
-            ns1:userInteractionCount 2367 ],
-        [ a ns1:InteractionCounter ;
-            ns1:interactionType "http://schema.org/ViewAction" ;
-            ns1:userInteractionCount 1227283 ],
+            ns1:interactionType "http://schema.org/DownloadAction" ;
+            ns1:userInteractionCount 361572 ],
         [ a ns1:InteractionCounter ;
             ns1:interactionType "http://schema.org/CommentAction" ;
-            ns1:userInteractionCount 38 ],
+            ns1:userInteractionCount 40 ],
         [ a ns1:InteractionCounter ;
-            ns1:interactionType "http://schema.org/DownloadAction" ;
-            ns1:userInteractionCount 325905 ] ;
+            ns1:interactionType "http://schema.org/ViewAction" ;
+            ns1:userInteractionCount 1352392 ],
+        [ a ns1:InteractionCounter ;
+            ns1:interactionType "http://schema.org/LikeAction" ;
+            ns1:userInteractionCount 2532 ] ;
     ns1:isAccessibleForFree true ;
     ns1:keywords "subject, health and fitness, health, health conditions, diseases",
         "subject, health and fitness, health, health conditions, diseases, covid19",
